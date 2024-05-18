@@ -1,11 +1,12 @@
 /** @jsx jsx */
-import hjzWord from '../assets/images/Hjz-word.svg';
+// import hjzWord from '../assets/images/Hjz-word.svg';
 import { jsx, Box, Container, Text } from 'theme-ui';
 // import { useStaticQuery, graphql } from 'gatsby';
 import { rgba } from 'polished';
 // import Img from 'components/image';
 import SubscriptionForm from '../components/subscription-form';
-import hjzHeader from '../assets/images/banner02.svg';
+// import hjzHeader from '../assets/images/banner02.svg';
+import clicknVideo from '../assets/video/homepage-clickn-AI-web.mp4';
 // import headerArrow from '../assets/images/headerArrow.svg';
 import headerArrowEn from '../assets/images/headerArrow-en.svg';
 
@@ -53,7 +54,6 @@ const Banner = () => {
             <h1 style={{lineHeight:'0.9'}}>
               <span className="header-font" style={{lineHeight: "0.8",fontSize: "2em",color: "#083c3a"}}>
                 {/* {t("hjz")} */}
-                <img  src={hjzWord} alt='hjz' />
               </span>
               <span className="sub-header" id="sub-head" >
                 {t("ONE-STOP-SHOP")}
@@ -78,13 +78,15 @@ const Banner = () => {
               </Flex>
             </Flex> */}
           </Box>
-          <Box as="figure" id="main-image" sx={styles.bannerImage}>
-            {/* <Img
-              src={image.illustration.childImageSharp.fluid}
-              alt="illustration"
-            /> */}
-          
+          {/* <Box as="figure" id="main-image" sx={styles.bannerImage}>  
             <img  src={hjzHeader} alt='hjz' />
+          </Box> */}
+
+          <Box >
+              <video  muted="true" preload="metadata" loop autoplay="true"  as="figure" id="main-image" sx={styles.bannerImage}>
+                <source src={clicknVideo} type="video/mp4" />
+                <source src={clicknVideo} type="video/ogg" />
+              </video>
           </Box>
         <div className='know-more'>
          <img  src={headerArrowEn} alt='hjz' />
@@ -103,7 +105,7 @@ export default Banner;
 const styles = {
 
   section: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#0B0B0D',
     pt: [14, null, null, null, null, 0],
     pb: [6, null, null, 7, 11, 0],
   },
@@ -194,13 +196,10 @@ const styles = {
     },
   },
   bannerImage: {
-    // width:'100%',
+    width:'100%',
+    height: "100%",
     alignItems: 'center',
-    maxWidth: '550px', // need to fix
+    maxWidth: '800px', // need to fix
     mt: [0, null, null, null, 0],
-    img: {
-      width:'100%',
-      m: [null, null, null, '5 auto', 0],
-    },
   },
 };
