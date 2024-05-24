@@ -52,7 +52,7 @@ const PremiumFeature = () => {
   //   }
   // `);
   return (
-    <section id="FAQs" sx={styles.section} style={{marginBottom: '30px'}}>
+    <section id="FAQs" sx={styles.section} >
       <Container >
         <Grid sx={styles.grid} >
           <Box as="figure" sx={styles.illustration} style={{margin: '10px'}}>
@@ -130,6 +130,6 @@ const styles = {
   accordionGroup: {
     m: [null, null, null, '0 auto', 'unset'],
     maxWidth: [null, null, null, 600, 'none'],
-    color:"#000033",
+    color:"#0B0B0E",
   },
 };

@@ -12,10 +12,7 @@ export default function policyGuest() {
         <div>
             <div style={{height:"10%"}}>
                 <Footer />
-                <SEO
-                    title="حجز مطعم, حجز كوفي"
-                    description="حجز طاولة, حجز مطعم, حجز كوفي, حجز مطاعم"
-                />
+              
                 {/* <Header /> */}
                 
                     <main

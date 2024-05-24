@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Flex,Grid, Input, Button, Label } from 'theme-ui';
+import { jsx, Flex } from 'theme-ui';
 import  '../assets/styles/banner.scss';
 import { useTranslation } from 'react-i18next'
 import {db} from "../utils/config"
@@ -50,7 +50,7 @@ const SubscriptionForm = ({ buttonLabel, ...props }) => {
 
   return (
     <Flex onSubmit={SendInformation} as="form" id="form" sx={styles.form} {...props} >
-        <Grid gap={4} columns={[1, null, 2]} >
+        {/* <Grid gap={4} columns={[1, null, 2]} >
             <Label htmlFor="company-name" variant="styles.srOnly">
               {t('Company-Name')}
             </Label>
@@ -77,7 +77,7 @@ const SubscriptionForm = ({ buttonLabel, ...props }) => {
                     
         </Grid>
           <Button  id="btunn" style={{margin: "5px",background:"#FE6A00",color:"white", display:'block'}}>{buttonLabel ?? t('Subscribe')}</Button>
-      
+       */}
     </Flex>
   );
 };

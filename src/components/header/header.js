@@ -69,7 +69,7 @@ export default function Header() {
   return (
     <DrawerProvider>
       <Box sx={styles.headerWrapper} >
-        <Sticky enabled={true} top={0} activeClass="is-sticky" innerZ={100}>
+        <Sticky enabled={false} top={0} activeClass="is-sticky" innerZ={100}>
           <Box id="header-en"
             as="header"
             variant="layout.header"

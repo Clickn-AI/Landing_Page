@@ -5,9 +5,9 @@ import SectionHeading from 'components/section-heading';
 // import Accordion from 'components/accordion/accordion';
 // import Image from 'components/image';
 // import emoji from 'assets/images/icons/emoji-2.png';
-import how01 from '../assets/images/how01.svg';
-import how02 from '../assets/images/how02.svg';
-import how03 from '../assets/images/how03.svg';
+import how01 from '../assets/images/speech-to-text.svg';
+import how02 from '../assets/images/text-to-speech.svg';
+import how03 from '../assets/images/AI-to-speech.svg';
 import { useTranslation } from 'react-i18next'
 
 
@@ -47,7 +47,7 @@ const PremiumFeature = () => {
   //   query {
   //     illustration: file(relativePath: { eq: "messenger.png" }) {
   //       childImageSharp {
-  //         fluid(maxWidth: 1000) {
+  //         fluid(maxWidth: 118D678) {
   //           ...GatsbyImageSharpFluid
   //         }
   //       }
@@ -74,31 +74,31 @@ const PremiumFeature = () => {
             <div >
               <Flex id="icon" sx={styles.step} >
                 <img  sx={styles.icon} src={how01} alt={t("How-work-Title-01")} />
-                <h1 sx={styles.number}>01</h1>
+                <h1 sx={styles.number}></h1>
                 <Flex>
                   <Box sx={styles.descriptionBox}>
-                  <h4 style={{marginBottom:0,color:'#FE6A00'}} className="sub-header-how">{t("How-work-Title-01")}</h4>
-                  <p style={{color:'#000033',marginTop:0}}>{t("How-work-Description-01")}</p>
+                  <h4 style={{marginBottom:0,color:'#18D678'}} className="sub-header-how">{t("How-work-Title-01")}</h4>
+                  <p style={{color:'#FFF',marginTop:0}}>{t("How-work-Description-01")}</p>
                   </Box>
                 </Flex>
               </Flex>
               <Flex id="icon" sx={styles.step}>
                 <img  sx={styles.icon} src={how02} alt={t("How-work-Title-02")} />
-                <h1 sx={styles.number}>02</h1>
+                <h1 sx={styles.number}></h1>
                 <Flex>
                   <Box sx={styles.descriptionBox}>
-                  <h4 style={{marginBottom:0,color:'#FE6A00'}} className="sub-header-how">{t("How-work-Title-02")}</h4>
-                  <p style={{color:'#000033',marginTop:0}}>{t("How-work-Description-02")}</p>
+                  <h4 style={{marginBottom:0,color:'#18D678'}} className="sub-header-how">{t("How-work-Title-02")}</h4>
+                  <p style={{color:'#FFF',marginTop:0}}>{t("How-work-Description-02")}</p>
                   </Box>
                 </Flex>
               </Flex>
               <Flex id="icon" sx={styles.step}>
                 <img  sx={styles.icon} src={how03} alt={t("How-work-Title-03")} />
-                <h1 sx={styles.number}>03</h1>
+                <h1 sx={styles.number}></h1>
                 <Flex>
                   <Box sx={styles.descriptionBox}>
-                  <h4 style={{marginBottom:0, color:'#FE6A00'}} className="sub-header-how">{t("How-work-Title-03")}</h4>
-                  <p style={{color:'#000033',marginTop:0}}>{t("How-work-Description-03")}</p>
+                  <h4 style={{marginBottom:0, color:'#18D678'}} className="sub-header-how">{t("How-work-Title-03")}</h4>
+                  <p style={{color:'#FFF',marginTop:0}}>{t("How-work-Description-03")}</p>
                   </Box>
                 </Flex>
               </Flex>
@@ -132,7 +132,7 @@ const styles = {
       textAlign: 'center',
       height: '100%',
       background: '#FAFAFA',
-      border: '5px solid #FE6A00',
+      border: '5px solid #18D678',
       padding: '15px 0',
       fontSize: '1.8em'
     } 
@@ -154,7 +154,7 @@ const styles = {
     fontSize: '50px',
     fontWeight: '990',
     fontFamily: 'revert',
-    color:'#000033'
+    color:'#FFF'
   },
   descriptionBox:{
     marginLeft:'10px'
@@ -179,7 +179,7 @@ const styles = {
     maxWidth: [null, null, null, 520, 660],
     h2: {
       fontWight:'bold',
-      color:'#FE6A00',
+      color:'#18D678',
       fontSize: '3em',
       margin: "0px",
       // fontSize: [null, null, null, 20, 8, 40],
@@ -191,7 +191,7 @@ const styles = {
     p: {
       // fontSize: [null, null, null, 2],
       margin: "0px",
-      color:'#000033',
+      color:'#FFF',
       fontSize: '2em',
     },
     

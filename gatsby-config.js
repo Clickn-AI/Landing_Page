@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Hjz | حجز`,
-    description: `حجز مطعم, حجز طاولة, حجز كوفي, حجز مطاعم`,
-    author: `@hjz.sa`,
+    title: `Clickn.AI`,
+    description: `ذكاء اصطناعي, تحويل النص للصوت بالعربي, حول خدمة العملاء لذكاء أصطناعي`,
+    author: `@Clickn.AI`,
   },
   plugins: [
   {
@@ -98,7 +98,7 @@ module.exports = {
         // Any additional optional fields
         sampleRate: 5,
         siteSpeedSampleRate: 10,
-        cookieDomain: 'hjz.sa',
+        cookieDomain: 'Clickn.AI',
       },
     },
     // {
@@ -110,8 +110,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://www.hjz.sa',
-        sitemap: 'https://www.hjz.sa',
+        host: 'https://www.clickn.ai',
+        sitemap: 'https://www.clickn.ai',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },

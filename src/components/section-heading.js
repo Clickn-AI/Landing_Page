@@ -8,7 +8,7 @@ const SectionHeading = ({ title, description, emoji, ...props }) => {
         {emoji ? <span>{title}</span> : title}
         {emoji && <Image src={emoji} alt="emoji" />}
       </Heading>
-      <Text as="p" sx={styles.description}>
+      <Text as="h2" sx={styles.description}>
         {description}
       </Text>
     </Box>

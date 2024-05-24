@@ -1,27 +1,27 @@
 /** @jsx jsx */
 import { jsx, Flex, Box, Text, Container } from 'theme-ui';
 import { rgba } from 'polished';
-import { Link } from 'components/link';
-import Logo from 'components/logo';
+// import { Link } from 'components/link';
+// import Logo from 'components/logo';
 
-const menuItems = [
-    // {
-    //   path: '#home',
-    //   label: 'Home',
-    // },
-    // {
-    //   path: '#whyhjz',
-    //   label: 'Why Hjz',
-    // },
-    // {
-    //   path: '#HowUseIt',
-    //   label: 'How use it',
-    // },
-    // {
-    //   path: '#FAQs',
-    //   label: 'FAQs',
-    // }
-];
+// const menuItems = [
+//     // {
+//     //   path: '#home',
+//     //   label: 'Home',
+//     // },
+//     // {
+//     //   path: '#whyhjz',
+//     //   label: 'Why Hjz',
+//     // },
+//     // {
+//     //   path: '#HowUseIt',
+//     //   label: 'How use it',
+//     // },
+//     // {
+//     //   path: '#FAQs',
+//     //   label: 'FAQs',
+//     // }
+// ];
 
 export default function Footer() {
   return (
@@ -30,19 +30,19 @@ export default function Footer() {
         <Flex sx={styles.footerInner}>
           <Flex sx={styles.copyright}>
            <Text as="span"><a href="/policyGuest" style={{color:"white"}}>الشروط و الاحكام  للعميل</a></Text>
-            <Logo isWhite />
+            {/* <Logo isWhite /> */}
             <Text as="span">
-              &copy; Copyright by Hjz {new Date().getFullYear()}  
+              &copy; Copyright by Clickn.AI {new Date().getFullYear()}  
             </Text>
           </Flex>
-          <Flex as="ul" sx={styles.footerNav}>
+          {/* <Flex as="ul" sx={styles.footerNav}>
             {menuItems?.map((item, index) => (
               <li key={index}>
                 <Link path={item?.path}>{item?.label}</Link>
 
               </li>
             ))}
-          </Flex>
+          </Flex> */}
         </Flex>
       </Container>
     </Box>
@@ -51,7 +51,7 @@ export default function Footer() {
 
 const styles = {
   footer: {
-    backgroundColor: '#000033',
+    backgroundColor: '#0B0B0E',
     pt: [6],
     pb: [6],
     alignItems: 'center',

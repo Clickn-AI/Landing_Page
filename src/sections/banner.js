@@ -45,6 +45,9 @@ const Banner = () => {
   //     }
   //   }
   // `);
+
+
+
   return (
     <section id="home" sx={styles.section} >
       <Container>
@@ -83,18 +86,34 @@ const Banner = () => {
           </Box> */}
 
           <Box >
-              <video  muted="true" preload="metadata" loop autoplay="true"  as="figure" id="main-image" sx={styles.bannerImage}>
+              <video  muted preload="metadata" loop autoPlay  as="figure" id="main-image" sx={styles.bannerImage}>
                 <source src={clicknVideo} type="video/mp4" />
                 <source src={clicknVideo} type="video/ogg" />
               </video>
           </Box>
-        <div className='know-more'>
-         <img  src={headerArrowEn} alt='hjz' />
-         <h3 className="title-know-more">{t("know-more-title")}</h3>
-        </div>
         </Box>
         {/* <div className="arrows"></div> */}
-
+        <Container>
+            <div className='know-more'>
+              <img  src={headerArrowEn} alt='hjz' />
+              <h3 className="title-know-more">{t("know-more-title")}</h3>
+            </div>
+        </Container>
+        <Container>
+        <div class="logos">
+          <div class="logos-slide">
+            <img alt="images" src="https://white.logodownload.org/wp-content/uploads/2020/11/google-white-logo.png" />
+            <img alt="images" src="https://ndf.gov.sa/wp-content/themes/ndf/img/logo.svg" />
+            <img alt="images" src="https://ndf.gov.sa/wp-content/themes/ndf/img/vision-2030.svg" />
+            <img alt="images" src="https://ksaimg1.b8cdn.com/images/templates/mnsht/mnsht-logo-en.png" />
+            <img alt="images" src="https://white.logodownload.org/wp-content/uploads/2020/11/google-white-logo.png" />
+            <img alt="images" src="https://ndf.gov.sa/wp-content/themes/ndf/img/logo.svg" />
+            <img alt="images" src="https://ndf.gov.sa/wp-content/themes/ndf/img/vision-2030.svg" />
+            <img alt="images" src="https://ksaimg1.b8cdn.com/images/templates/mnsht/mnsht-logo-en.png" />
+          </div>
+          
+        </div>
+        </Container>
       </Container>
     </section>
   );

@@ -9,9 +9,9 @@ import {
   Text
 
 } from 'theme-ui';
-import support01 from 'assets/images/support01.svg';
-import support02 from 'assets/images/support02.svg';
-import support03 from 'assets/images/support03.svg';
+import support01 from 'assets/images/support01.avif';
+import support02 from 'assets/images/support02.avif';
+import support03 from 'assets/images/support03.avif';
 // import rightArrow from 'assets/images/icons/right-arrow.png';
 import SectionHeading from 'components/section-heading';
 import { useTranslation } from 'react-i18next'
@@ -144,7 +144,7 @@ const styles = {
       fontWeight: 700,
       fontSize: [2, null, null, null, 4],
       lineHeight: 1.5,
-      color: '#000033',
+      color: '#FFF',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
@@ -152,7 +152,7 @@ const styles = {
     p: {
       fontSize: [1, null, null, null, 15],
       lineHeight: [2.13],
-      color: '#000033',
+      color: '#FFF',
       mt: [3],
     },
   },

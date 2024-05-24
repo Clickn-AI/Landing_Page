@@ -21,8 +21,8 @@ export default function IndexPage() {
 
     <Layout >
       <SEO
-        title="حجز مطعم, حجز كوفي"
-        description="حجز طاولة, حجز مطعم, حجز كوفي, حجز مطاعم"
+        title="Clickn.AI"
+        description="حول النص للصوت, افضل ذكاء أصطناعي بالغة العربية, حول جميع مكلماتك لذكاء اصطناعي"
       />
      
       <Banner />

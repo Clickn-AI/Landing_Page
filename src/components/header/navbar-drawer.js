@@ -98,7 +98,7 @@ const NavbarDrawer = () => {
             </Box>
           ))}
         </Box>
-        <Button onClick={changeLanguage} value="en" variant="orange" sx={styles.donateNow}>
+        <Button id="btn-en-ar" onClick={changeLanguage} value="en" variant="orange" sx={styles.donateNow}>
           English
         </Button>
       </Box>

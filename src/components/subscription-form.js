@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { jsx, Flex,Grid, Input, Button, Label } from 'theme-ui';
+import { jsx, Flex,Grid, Button } from 'theme-ui';
 // import { useState, useEffect } from 'react';
 import  '../assets/styles/banner.scss';
 import { useTranslation } from 'react-i18next'
@@ -57,30 +57,7 @@ const SubscriptionForm = ({ buttonLabel, ...props }) => {
   return (
     <Flex onSubmit={SendInformation} as="form" id="form" sx={styles.form} {...props}>
         <Grid gap={4} columns={[1, null, 2]} >
-            <Label htmlFor="company-name" variant="styles.srOnly">
-              {t('Company-Name')}
-            </Label>
-            <Input 
-              type="text"
-              id="company-name"
-              placeholder={t('Company-Name')}
-              maxLength = {80}
-              
-            />
-          
-        
-          <Label htmlFor="company-mobile" variant="styles.srOnly">
-          {t('Mobile')}
-          </Label>
-          
-          <Input
-            type="tel"
-            id="company-mobile"
-            placeholder="ex: 0560000000"
-            language="en"
-            maxLength = {10}
-          />                
-          <Button  id="btunn" style={{margin: "0px"}}>{buttonLabel ?? t('Subscribe')}</Button>
+          <Button  class="btn-subscriptionForm" style={{margin: "0px"}}><a style={{color: "white",textDecoration: "none"}} href="https://1ppcs512bgy.typeform.com"> {buttonLabel ?? t('Subscribe')}</a></Button>
         </Grid>
        
     </Flex>
@@ -94,7 +71,7 @@ const styles = {
     input: {
       flexGrow: 1,
       p: ['0 20px', null, null, null, '0 25px'],
-      minHeight: [60],
+      minHeight: [50],
       height: 'auto',
       width: 'auto',
     },
@@ -102,7 +79,6 @@ const styles = {
       ml: [0],
       alignItem: 'center',
       backgroundColor:'#FE6A00'
-    },
-    
+    }
   },
 };

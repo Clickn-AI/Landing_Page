@@ -5,7 +5,8 @@ import hjz from '../assets/images/Hjz.svg';
 const LogoNav = ({ isWhite, ...props }) => {
   return (
     <div id="logo-nav" className="logo-nav-en">
-      <img  src={hjz} alt='hjz' />
+      {/* <img  src="{hjz}" alt='clickn' /> */}
+      <h1 style={{color:"black"}}>Clickn.AI</h1>
       {/* style={{width:"185.92px",height:"36.62px"}} */}
 
       {/* <svg viewBox="0 0 185.92 36.62" width={185.92} height={36.62} {...props}>

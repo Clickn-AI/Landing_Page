@@ -25,7 +25,7 @@ export default Subscribe;
 
 const styles = {
   section: {
-    backgroundColor: '#000033',
+    backgroundColor: '#0B0B0E',
     pt: [9, null, null, null, 10, 13, null],
     // pb: [9, null, null, null, 11, 14, null],
     // display: 'flex',
