@@ -117,7 +117,7 @@ const PremiumFeature = () => {
         </Grid>
       </Container>
       <div sx={styles.normalBox}>
-              <h4>{t("word-box")}</h4>
+              <h4 id="word-box" >{t("word-box")}</h4>
       </div>
     </section>
   );

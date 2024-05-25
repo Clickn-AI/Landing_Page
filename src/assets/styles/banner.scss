@@ -202,6 +202,7 @@ body{
 }
 
 
+
 #sub-head{
     font-size: 0.8em !important;
     // line-height: 0.7 !important;
@@ -502,12 +503,15 @@ textarea:focus, input:focus,input:focus-visible , *:focus-visible *:focus , #com
 
 .how-style > .css-1pnci3e-SectionHeading{
     margin-top: -30px !important;
+    color: #18D678 !important;
+
 }
 
 
-.css-ta0pww-PremiumFeature h4{
+#word-box{
     margin: 0;
     background: #0B0B0E !important;
+    color: #DFDFE0 !important;
 }
 
 
@@ -520,4 +524,9 @@ textarea:focus, input:focus,input:focus-visible , *:focus-visible *:focus , #com
     color: rgb(255, 255, 255);
     filter: drop-shadow(rgba(56, 237, 172, 0.2) 10px 0px 15px) drop-shadow(rgba(150, 162, 255, 0.2) -10px 0px 15px);
     border: 1px solid transparent;
+}
+
+
+#whyhjz{
+    background-color: #0B0B0D !important;
 }
