@@ -286,6 +286,9 @@ body{
 
 
 @media (max-width: 576px) { 
+    #word-box{
+        font-size: 1em !important;
+    }
     #header-en {
         margin-top: 0rem !important;
         margin-bottom: 1rem !important;
@@ -501,7 +504,7 @@ textarea:focus, input:focus,input:focus-visible , *:focus-visible *:focus , #com
     max-height: 70px !important;
 }
 
-.how-style > .css-1pnci3e-SectionHeading{
+#how-work-title > h2{
     margin-top: -30px !important;
     color: #18D678 !important;
 

@@ -63,7 +63,7 @@ const PremiumFeature = () => {
               src={image.illustration.childImageSharp.fluid}
               alt="messenger"
             /> */}
-            <SectionHeading className=" how-style "
+            <SectionHeading id="how-work-title" className="how-style "
               // emoji={emoji}
               sx={styles.heading}
               title={t("How")}

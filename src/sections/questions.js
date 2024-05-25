@@ -4,7 +4,7 @@ import { jsx, Box, Container, Grid } from 'theme-ui';
 import SectionHeading from 'components/section-heading';
 import Accordion from 'components/accordion/accordion';
 // import Image from 'components/image';
-import Question from '../assets/images/question.svg';
+import Question from '../assets/images/question.png';
 import  '../assets/styles/banner.scss';
 import { useTranslation } from 'react-i18next'
 
