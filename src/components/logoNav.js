@@ -1,6 +1,6 @@
 import React from 'react';
 // import LogoWhite from '../assets/images/logo-white.png';
-import hjz from '../assets/images/Hjz.svg';
+// import hjz from '../assets/images/icon.png';
 
 const LogoNav = ({ isWhite, ...props }) => {
   return (

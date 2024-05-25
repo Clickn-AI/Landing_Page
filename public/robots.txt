@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.hjz.sa
-Host: https://www.hjz.sa
+Sitemap: https://www.clickn.ai
+Host: https://www.clickn.ai
