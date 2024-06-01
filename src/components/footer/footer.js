@@ -29,8 +29,7 @@ export default function Footer() {
       <Container>
         <Flex sx={styles.footerInner}>
           <Flex sx={styles.copyright}>
-           <Text as="span"><a href="/policyGuest" style={{color:"white"}}>الشروط و الاحكام  للعميل</a></Text>
-            {/* <Logo isWhite /> */}
+           {/* <Text as="span"><a href="/policyGuest" style={{color:"white"}}>الشروط و الاحكام  للعميل</a></Text> */}
             <Text as="span">
               &copy; Copyright by Clickn.AI {new Date().getFullYear()}  
             </Text>

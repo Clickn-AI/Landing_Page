@@ -8,7 +8,7 @@ import SubscriptionForm from '../components/subscription-form';
 // import hjzHeader from '../assets/images/banner02.svg';
 import clicknVideo from '../assets/video/homepage-clickn-AI-web.mp4';
 // import headerArrow from '../assets/images/headerArrow.svg';
-import headerArrowEn from '../assets/images/headerArrow-en.svg';
+// import headerArrowEn from '../assets/images/headerArrow-en.svg';
 
 // import paypal from 'assets/images/paypal.png';
 // import google from 'assets/images/google.png';
@@ -95,7 +95,7 @@ const Banner = () => {
         {/* <div className="arrows"></div> */}
         <Container>
             <div className='know-more'>
-              <img  src={headerArrowEn} alt='hjz' />
+              {/* <img  src={headerArrowEn} alt='hjz' /> */}
               <h3 className="title-know-more">{t("know-more-title")}</h3>
             </div>
         </Container>
