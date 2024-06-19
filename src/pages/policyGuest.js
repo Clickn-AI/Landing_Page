@@ -13,7 +13,7 @@ export default function policyGuest() {
             <div style={{height:"10%"}}>
                 <Footer />
                 <SEO
-                    title="Clickn.AI"
+                    title="Hams.AI"
                     description="حول النص للصوت, افضل ذكاء أصطناعي بالغة العربية, حول جميع مكلماتك لذكاء اصطناعي"
                 />
                 {/* <Header /> */}

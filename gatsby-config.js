@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Clickn.AI`,
+    title: `Hams.AI`,
     description: `ذكاء اصطناعي, تحويل النص للصوت بالعربي, حول خدمة العملاء لذكاء أصطناعي`,
-    author: `@Clickn.AI`,
+    author: `team@Hams.AI`,
   },
   plugins: [
   {
@@ -98,7 +98,7 @@ module.exports = {
         // Any additional optional fields
         sampleRate: 5,
         siteSpeedSampleRate: 10,
-        cookieDomain: 'Clickn.AI',
+        cookieDomain: 'hams.AI',
       },
     },
     // {
@@ -110,8 +110,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://www.clickn.ai',
-        sitemap: 'https://www.clickn.ai',
+        host: 'https://www.hams.ai',
+        sitemap: 'https://www.hams.ai',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },

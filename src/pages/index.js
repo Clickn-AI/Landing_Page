@@ -21,7 +21,7 @@ export default function IndexPage() {
 
     <Layout >
       <SEO
-        title="Clickn.AI"
+        title="Hams.AI"
         description="حول النص للصوت, افضل ذكاء أصطناعي بالغة العربية, حول جميع مكلماتك لذكاء اصطناعي"
       />
      

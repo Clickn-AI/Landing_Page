@@ -31,7 +31,7 @@ export default function Footer() {
           <Flex sx={styles.copyright}>
            {/* <Text as="span"><a href="/policyGuest" style={{color:"white"}}>الشروط و الاحكام  للعميل</a></Text> */}
             <Text as="span">
-              &copy; Copyright by Clickn.AI {new Date().getFullYear()}  
+              &copy; Copyright by Hams.AI {new Date().getFullYear()}  
             </Text>
           </Flex>
           {/* <Flex as="ul" sx={styles.footerNav}>
