@@ -45,6 +45,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-theme-ui`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
