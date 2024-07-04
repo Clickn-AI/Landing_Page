@@ -108,7 +108,47 @@
     color: #DFDFE0 !important;
 }
 
+.word-animation {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: blink-caret .6s infinite, typing 20s steps(14) infinite;
+}
 
+.border-left {
+    border-left: 4px solid;
+}
+  
+.border-right {
+  border-right: 4px solid;
+}
+
+@keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95%{ width: 0; }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{width: 100%; }; 
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
 
 .how-style{
     display: flex;

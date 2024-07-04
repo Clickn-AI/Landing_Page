@@ -4,8 +4,14 @@
     "Why hjz": "Why Ham.AI",
     "How it work?":"Solutions",
     "FAQs" : "FAQs",
+    "Voice AI": "Voice AI",
     "hjz":"Hams.AI",
-    "ONE-STOP-SHOP": "Turn voice data into insights with our leading Speech AI models.",
+    "ONE-STOP-SHOP": "Voice AI Benefits",
+    "Messages": [
+        "Improve customer call understanding",
+        "Automate accurate voice transcriptions",
+        "Extract insights from calls"
+    ],
     "Description-hjz": "Our voice AI platform provides APIs for speech-to-text, text-to-speech, and Arabic language understanding. From medical transcription to autonomous agents, Clickn is the one click go-to to use voice AI experiences.",
     "Subscribe":"Subscribe",
     "Company-Name":"Restaurant/Cafe Name",

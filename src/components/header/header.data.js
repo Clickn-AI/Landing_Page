@@ -10,6 +10,9 @@ export default [
   {
     path: 'HowUseIt',
     label: 'How it work',
+    subItems: [
+      { path: 'VoiceAI', label: 'Voice AI' }
+    ],
   },
   {
     path: 'FAQs',

@@ -18,6 +18,11 @@ export default function Header() {
     isMobileMenu: false,
     isSticky: false,
   });
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
 
   const handleCloseMenu = () => {
     setState({
@@ -90,14 +95,52 @@ export default function Header() {
                     sx={styles.navList}
                     className={state.isMobileMenu ? 'active' : ''}
                   >
-                    {menuItems.map(({ path, label }, i) => (
-                      <li key={i}>
-                        
-                        <NavLink
+                    {menuItems.map(({ path, label, subItems }, i) => (
+                      <li key={i} style={{position: 'relative' }}>
+                        {subItems ? (
+                          <div>
+                            <NavLink
+                              path={path}
+                              label={t(label)}
+                              onClick={handleDropdownToggle}
+                              style={{ cursor: 'pointer' }}
+                            />
+                            {isDropdownOpen && (
+                              <Box
+                                as="ul"
+                                style={{
+                                  position: 'absolute',
+                                  top: '100%',
+                                  left: '13px',
+                                  zIndex: 10,
+                                  padding:0
+                                }}
+                              >
+                                {subItems.map(({ path, label }, j) => (
+                                  <li key={j}>
+                                    <NavLink
+                                      path={path}
+                                      label={t(label)}
+                                      onClick={handleCloseMenu}
+                                      style={{ margin: 0, padding:'2px 0'}}
+                                    />
+                                  </li>
+                                ))}
+                              </Box>
+                            )}
+                          </div>
+                        ) : (
+                          <NavLink
+                            path={path}
+                            label={t(label)}
+                            onClick={handleCloseMenu}
+                          />
+                        )}
+                        {/* <NavLink
                           path={path}
                           label={t(label)}
                           onClick={handleCloseMenu}
-                        />
+                        /> */}
                       </li>
                     ))}
                   </Box>
