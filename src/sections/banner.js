@@ -17,6 +17,7 @@ import { useState, useEffect } from "react";
 import "../assets/styles/banner.scss";
 import { useTranslation } from "react-i18next";
 import '../i18n/config';
+import {Typewriter} from 'react-simple-typewriter';
 
 // const logos = [
 //   {
@@ -36,17 +37,6 @@ import '../i18n/config';
 const Banner = () => {
   const {t , i18n} = useTranslation();
   const phrases = t('Messages', { returnObjects: true });
-  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentPhraseIndex(prevIndex => (prevIndex + 1) % phrases.length);
-    }, 4000); // Change phrase every 5 seconds
-
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, []);
-
-  const isAR = i18n.language === 'ar';
 
   // const image = useStaticQuery(graphql`
   //   query {
@@ -83,8 +73,16 @@ const Banner = () => {
                   {t("ONE-STOP-SHOP")}
                 </span>
                 <br />
-                <span className={`sub-header word-animation ${isAR ? 'border-left' : 'border-right'}`} id="sub-head">
-                  {phrases[currentPhraseIndex]}
+                <span className="sub-header" id="sub-head">
+                  <Typewriter
+                    words={[phrases[0],phrases[1], phrases[2]]}
+                    loop={true}
+                    cursor={true}
+                    cursorStyle='|'
+                    typeSpeed={70}
+                    deleteSpeed={50}
+                    delaySpeed={1000}
+                  />
                 </span>
               </h1>
               {/* <hr className="hor-line" /> */}

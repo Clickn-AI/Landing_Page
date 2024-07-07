@@ -573,3 +573,47 @@ textarea:focus, input:focus,input:focus-visible , *:focus-visible *:focus , #com
 #whyhjz{
     background-color: #0B0B0D !important;
 }
+
+// TODO need to move all of these style
+.circle-container {
+    transition: filter 0.3s ease;
+    filter: brightness(.8); 
+  }
+
+  .circle-container:hover {
+    filter: brightness(1.2); /* Increase brightness on hover */
+  }
+@keyframes bounceY {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-9px);
+    }
+  }
+  
+  .animate-bounce-y {
+    animation: bounceY 4s infinite;
+  }
+
+  .inside-shadow{
+    background: radial-gradient(54.28% 54.28% at 50% 49.91%, rgba(0, 0, 0, 0.11) 31.5%, rgba(128, 255, 204, 0.1) 83.01%, rgba(128, 255, 204, 0.26) 98%);
+    box-shadow: inset rgba(128, 255, 204, 0.02) -5.604px -5.604px 280.193px 0px ;
+    backdrop-filter: blur(23.5362px);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .rotate {
+    animation: rotate 2s linear infinite;
+  }
