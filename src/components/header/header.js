@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { DrawerProvider } from 'contexts/drawer/drawer-provider';
 import NavbarDrawer from './navbar-drawer';
 import Logo from 'components/logoHeader';
-import { NavLink } from 'components/link';
+import { NavLink, Link } from 'components/link';
 import menuItems from './header.data';
 // import lock from 'assets/images/icons/lock.png';
 import { useTranslation } from 'react-i18next'
@@ -118,7 +118,7 @@ export default function Header() {
                               >
                                 {subItems.map(({ path, label }, j) => (
                                   <li key={j}>
-                                    <NavLink
+                                    <Link
                                       path={path}
                                       label={t(label)}
                                       onClick={handleCloseMenu}
