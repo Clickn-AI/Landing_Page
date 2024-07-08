@@ -15,10 +15,12 @@ import { useState, useEffect } from "react";
 // import paypal from 'assets/images/paypal.png';
 // import google from 'assets/images/google.png';
 // import dropbox from 'assets/images/dropbox.png';
+import React from 'react';
 import "../assets/styles/banner.scss";
 import { useTranslation } from "react-i18next";
 import '../i18n/config';
 import {Typewriter} from 'react-simple-typewriter';
+import Header from '../components/header/header';
 
 
 const VoiceAI = () => {
@@ -26,6 +28,8 @@ const VoiceAI = () => {
   const phrases = t('Messages', { returnObjects: true });
 
   return (
+    <>
+    <Header />
     <section id="home" sx={styles.section}>
       <Container>
         <Box sx={styles.contentWrapper}>
@@ -96,13 +100,13 @@ const VoiceAI = () => {
           </Box>
         </Box>
         {/* <div className="arrows"></div> */}
-        <Container>
+        {/* <Container>
           <div className="know-more">
-            {/* <img  src={headerArrowEn} alt='hjz' /> */}
-            <h3 className="title-know-more">{t("know-more-title")}</h3>
+            <img  src={headerArrowEn} alt='hjz' />
+            <h3 className="title-know-more">{t("know-more-title")}</h3> 
           </div>
-        </Container>
-        <Container>
+        </Container> */}
+        {/* <Container>
           <div class="logos">
             <div class="logos-slide">
               <img
@@ -139,9 +143,10 @@ const VoiceAI = () => {
               />
             </div>
           </div>
-        </Container>
+        </Container>*/}
       </Container>
     </section>
+    </>
   );
 };
 

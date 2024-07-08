@@ -96,7 +96,7 @@ export default function Header() {
                     className={state.isMobileMenu ? 'active' : ''}
                   >
                     {menuItems.map(({ path, label, subItems }, i) => (
-                      <li key={i} style={{position: 'relative' }}>
+                      <li key={i}>
                         {subItems ? (
                           <div>
                             <NavLink
@@ -110,8 +110,6 @@ export default function Header() {
                                 as="ul"
                                 style={{
                                   position: 'absolute',
-                                  top: '100%',
-                                  left: '13px',
                                   zIndex: 10,
                                   padding:0
                                 }}
@@ -122,7 +120,7 @@ export default function Header() {
                                       path={path}
                                       label={t(label)}
                                       onClick={handleCloseMenu}
-                                      style={{ margin: 0, padding:'2px 0'}}
+                                      style={{ padding:'4px 0'}}
                                     />
                                   </li>
                                 ))}
@@ -136,11 +134,6 @@ export default function Header() {
                             onClick={handleCloseMenu}
                           />
                         )}
-                        {/* <NavLink
-                          path={path}
-                          label={t(label)}
-                          onClick={handleCloseMenu}
-                        /> */}
                       </li>
                     ))}
                   </Box>
