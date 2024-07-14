@@ -16,9 +16,17 @@ import { useState, useEffect } from "react";
 // import dropbox from 'assets/images/dropbox.png';
 import "../assets/styles/banner.scss";
 import { useTranslation } from "react-i18next";
-import '../i18n/config';
-import {Typewriter} from 'react-simple-typewriter';
+import "../i18n/config";
+import { Typewriter } from "react-simple-typewriter";
 
+import React from "react";
+import "swiper/swiper-bundle.min.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay } from "swiper";
+SwiperCore.use([Autoplay]);
+
+// Install the modules
+// SwiperCore.use([Autoplay, Loop]);
 // const logos = [
 //   {
 //     name: 'Paypal',
@@ -33,10 +41,25 @@ import {Typewriter} from 'react-simple-typewriter';
 //     src: dropbox,
 //   },
 // ];
-
+// SwiperCore.use([Loop]);
 const Banner = () => {
-  const {t , i18n} = useTranslation();
-  const phrases = t('Messages', { returnObjects: true });
+  const { t, i18n } = useTranslation();
+  const phrases = t("Banner-Messages", { returnObjects: true });
+  const [key, setKey] = useState(0);
+  let language = i18n.language;
+  useEffect(() => {
+    setKey((prevKey) => prevKey + 1);
+  }, [language]);
+  const icons = [
+    "https://white.logodownload.org/wp-content/uploads/2020/11/google-white-logo.png",
+    "https://ndf.gov.sa/wp-content/themes/ndf/img/logo.svg",
+    "https://ndf.gov.sa/wp-content/themes/ndf/img/vision-2030.svg",
+    "https://ksaimg1.b8cdn.com/images/templates/mnsht/mnsht-logo-en.png",
+    "https://white.logodownload.org/wp-content/uploads/2020/11/google-white-logo.png",
+    "https://ndf.gov.sa/wp-content/themes/ndf/img/logo.svg",
+    "https://ndf.gov.sa/wp-content/themes/ndf/img/vision-2030.svg",
+    "https://ksaimg1.b8cdn.com/images/templates/mnsht/mnsht-logo-en.png",
+  ];
 
   // const image = useStaticQuery(graphql`
   //   query {
@@ -75,10 +98,11 @@ const Banner = () => {
                 <br />
                 <span className="sub-header" id="sub-head">
                   <Typewriter
-                    words={[phrases[0],phrases[1], phrases[2]]}
+                    key={key}
+                    words={[phrases[0], phrases[1], phrases[2]]}
                     loop={true}
                     cursor={true}
-                    cursorStyle='|'
+                    cursorStyle="|"
                     typeSpeed={70}
                     deleteSpeed={50}
                     delaySpeed={1000}
@@ -141,7 +165,7 @@ const Banner = () => {
           </div>
         </Container>
         <Container>
-          <div class="logos">
+          {/* <div class="logos">
             <div class="logos-slide">
               <img
                 alt="images"
@@ -176,6 +200,39 @@ const Banner = () => {
                 src="https://ksaimg1.b8cdn.com/images/templates/mnsht/mnsht-logo-en.png"
               />
             </div>
+          </div> */}
+          <div class="logos">
+            <Swiper
+              spaceBetween={40}
+              //  slidesPerView={7}
+              loop={true}
+              autoplay={{
+                delay: 0,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                1024: {
+                  slidesPerView: 8,
+                },
+                768: {
+                  slidesPerView: 4,
+                },
+                320: {
+                  slidesPerView: 3,
+                },
+              }}
+              speed={1000}
+            >
+              {icons.map((icon, index) => (
+                <SwiperSlide key={index} className="swiper-slide">
+                  <img
+                    src={icon}
+                    alt={`icon-${index}`}
+                    style={{ height: "50px" }}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </Container>
       </Container>

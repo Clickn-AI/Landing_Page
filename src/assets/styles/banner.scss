@@ -279,7 +279,7 @@ body{
     position: relative;
     font-size: 1rem;
     line-height: 2;
-    background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) padding-box padding-box, linear-gradient(90deg, rgb(32, 28, 255) -91.5%, rgb(19, 239, 149) 80.05%) border-box border-box;
+    background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) padding-box padding-box, linear-gradient(90deg, rgb(32, 28, 255) -91.5%, rgb(19, 239, 149) 80.05%) border-box border-box !important;
     color: rgb(255, 255, 255);
     filter: drop-shadow(rgba(56, 237, 172, 0.2) 10px 0px 15px) drop-shadow(rgba(150, 162, 255, 0.2) -10px 0px 15px);
     border: 1px solid transparent;
@@ -391,6 +391,11 @@ body{
     #FAQs{
         padding:0px;
         padding-bottom:20px;
+    }
+
+    .logos:before,
+    .logos:after {
+        width: 5px !important;
     }   
  }
 
@@ -445,7 +450,12 @@ body{
     height: 50px;
     margin: 0 40px;
   }
-  
+
+  .swiper-slide {
+    display: flex;
+    // justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
 
 
  #header-en{

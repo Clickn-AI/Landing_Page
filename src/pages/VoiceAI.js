@@ -21,11 +21,17 @@ import { useTranslation } from "react-i18next";
 import '../i18n/config';
 import {Typewriter} from 'react-simple-typewriter';
 import Header from '../components/header/header';
+// import AudioStreamer from '../components/AudioStreamer';
 
 
 const VoiceAI = () => {
   const {t , i18n} = useTranslation();
-  const phrases = t('Messages', { returnObjects: true });
+  const phrases = t('Solution-Messages', { returnObjects: true });
+  const [key, setKey] = useState(0);
+  let language = i18n.language;
+  useEffect(() => {
+    setKey(prevKey => prevKey + 1);
+  }, [language]);
 
   return (
     <>
@@ -52,6 +58,7 @@ const VoiceAI = () => {
                 <br />
                 <span className="sub-header" id="sub-head">
                   <Typewriter
+                      key={key}
                       words={[phrases[0],phrases[1], phrases[2]]}
                       loop={true}
                       cursor={true}
@@ -79,71 +86,12 @@ const VoiceAI = () => {
               </p>
             </div>
             <Text as="p"></Text>
-            <SubscriptionForm sx={styles.subscriptionForm} />
-            {/* <Flex sx={styles.sponsoredBy}>
-              <Text as="span">Sponsored by:</Text>
-              <Flex sx={styles.sponsor}>
-                {logos?.map((logo, index) => (
-                  <Flex as="figure" key={index}>
-                    <Image src={logo.src} alt={logo.name} />
-                  </Flex>
-                ))}
-              </Flex>
-            </Flex> */}
           </Box>
-          {/* <Box as="figure" id="main-image" sx={styles.bannerImage}>  
-          ?  <img  src={hjzHeader} alt='hjz' />
-          </Box> */}
-
           <Box>
+          {/* <AudioStreamer podId="yourPodId" port={8081} subdomain="custom.proxy.runpod.net" /> */}
             <InteractiveCircle />
           </Box>
         </Box>
-        {/* <div className="arrows"></div> */}
-        {/* <Container>
-          <div className="know-more">
-            <img  src={headerArrowEn} alt='hjz' />
-            <h3 className="title-know-more">{t("know-more-title")}</h3> 
-          </div>
-        </Container> */}
-        {/* <Container>
-          <div class="logos">
-            <div class="logos-slide">
-              <img
-                alt="images"
-                src="https://white.logodownload.org/wp-content/uploads/2020/11/google-white-logo.png"
-              />
-              <img
-                alt="images"
-                src="https://ndf.gov.sa/wp-content/themes/ndf/img/logo.svg"
-              />
-              <img
-                alt="images"
-                src="https://ndf.gov.sa/wp-content/themes/ndf/img/vision-2030.svg"
-              />
-              <img
-                alt="images"
-                src="https://ksaimg1.b8cdn.com/images/templates/mnsht/mnsht-logo-en.png"
-              />
-              <img
-                alt="images"
-                src="https://white.logodownload.org/wp-content/uploads/2020/11/google-white-logo.png"
-              />
-              <img
-                alt="images"
-                src="https://ndf.gov.sa/wp-content/themes/ndf/img/logo.svg"
-              />
-              <img
-                alt="images"
-                src="https://ndf.gov.sa/wp-content/themes/ndf/img/vision-2030.svg"
-              />
-              <img
-                alt="images"
-                src="https://ksaimg1.b8cdn.com/images/templates/mnsht/mnsht-logo-en.png"
-              />
-            </div>
-          </div>
-        </Container>*/}
       </Container>
     </section>
     </>

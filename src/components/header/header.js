@@ -19,9 +19,17 @@ export default function Header() {
     isSticky: false,
   });
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  
 
-  const handleDropdownToggle = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+  // const handleDropdownToggle = () => {
+  //   setIsDropdownOpen(!isDropdownOpen);
+  // };
+
+  const handleDropdownToggle = (index) => {
+    setIsDropdownOpen(prevState => ({
+      ...prevState,
+      [index]: !prevState[index]
+    }));
   };
 
   const handleCloseMenu = () => {
@@ -102,16 +110,16 @@ export default function Header() {
                             <NavLink
                               path={path}
                               label={t(label)}
-                              onClick={handleDropdownToggle}
+                              onClick={() => handleDropdownToggle(i)}
                               style={{ cursor: 'pointer' }}
+                              hasSubItems={true}
                             />
-                            {isDropdownOpen && (
+                            {isDropdownOpen[i] && (
                               <Box
                                 as="ul"
+                                className="absolute z-10 backdrop-blur-2xl bg-white/30 rounded-md shadow-lg p-0"
                                 style={{
-                                  position: 'absolute',
-                                  zIndex: 10,
-                                  padding:0
+                                  margin:'6px 0',
                                 }}
                               >
                                 {subItems.map(({ path, label }, j) => (
@@ -120,7 +128,7 @@ export default function Header() {
                                       path={path}
                                       label={t(label)}
                                       onClick={handleCloseMenu}
-                                      style={{ padding:'4px 0'}}
+                                      className="block px-4 py-2 text-white hover:bg-gray-200 hover:rounded-md hover:text-black"
                                     />
                                   </li>
                                 ))}
@@ -132,6 +140,7 @@ export default function Header() {
                             path={path}
                             label={t(label)}
                             onClick={handleCloseMenu}
+                            hasSubItems={false}
                           />
                         )}
                       </li>
