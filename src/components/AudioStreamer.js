@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { MicVAD } from "@ricky0123/vad-web";
 
-const AudioStreamer = ({ podId, port = 8080, subdomain = "proxy.runpod.net" }) => {
+const AudioStreamer = () => {
   const [isStreaming, setIsStreaming] = useState(false);
   const audioQueue = useRef([]);
   const isPlaying = useRef(false);
@@ -46,7 +46,7 @@ const AudioStreamer = ({ podId, port = 8080, subdomain = "proxy.runpod.net" }) =
   };
 
   const initializeWebSocket = () => {
-    socket.current = new WebSocket(`wss://${podId}-${port}.${subdomain}/ws/transcribe`);
+    socket.current = new WebSocket(`ws://127.0.0.1:8000/ws/transcribe`);
 
     socket.current.onopen = () => {
       console.log("WebSocket connection established");

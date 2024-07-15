@@ -37,7 +37,7 @@ const VoiceAI = () => {
     <>
     <Header />
     <section id="home" sx={styles.section}>
-      <Container>
+      <Container style={{ height: "100vh" }}>
         <Box sx={styles.contentWrapper}>
           <Box sx={styles.bannerContent} style={{ marginTop: "30px" }}>
             <div className="ar">
@@ -88,7 +88,7 @@ const VoiceAI = () => {
             <Text as="p"></Text>
           </Box>
           <Box>
-          {/* <AudioStreamer podId="yourPodId" port={8081} subdomain="custom.proxy.runpod.net" /> */}
+          {/* <AudioStreamer /> */}
             <InteractiveCircle />
           </Box>
         </Box>

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Box, Image, Button, MenuButton } from 'theme-ui';
 import React, { useContext } from 'react';
-import { Link } from 'react-scroll';
+// import { Link } from 'react-scroll';
 import { rgba } from 'polished';
 import { DrawerContext } from 'contexts/drawer/drawer-context';
 import Drawer from 'components/drawer';
@@ -11,6 +11,7 @@ import menuItems from './header.data';
 import close from 'assets/images/icons/close.png';
 import { useTranslation } from 'react-i18next'
 import '../../i18n/config';
+import { NavLink, Link } from 'components/link';
 
 
 
@@ -83,32 +84,20 @@ const NavbarDrawer = () => {
       <Box sx={styles.wrapper}>
         <Logo sx={styles.logo} />
         <Box as="ul" sx={styles.navbar}>
-          {/* {menuItems.map(({ path, label, subItems }, i) => (
-            <Box as="li" key={i}>
-              <Link
-                activeClass="active"
-                to={path}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                {t(label)}
-              </Link>
-            </Box>
-          ))} */}
           {menuItems.map(({ path, label, subItems }, i) => (
           <Box as="li" key={i}>
-            <Link
+            <NavLink
               activeClass="active"
               to={path}
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
+              label={t(label)}
+              // style={{ cursor: 'pointer', textAlign: 'right' }}
+              // spy={true}
+              // smooth={true}
+              // offset={-70}
+              // duration={500}
             >
               {t(label)}
-            </Link>
+            </NavLink>
             {subItems && (
               <Box as="ul" sx={styles.submenu}>
                 {subItems.map((subItem, j) => (
@@ -116,10 +105,10 @@ const NavbarDrawer = () => {
                     <Link
                       activeClass="active"
                       to={subItem.path}
-                      spy={true}
-                      smooth={true}
-                      offset={-70}
-                      duration={500}
+                      // spy={true}
+                      // smooth={true}
+                      // offset={-70}
+                      // duration={500}
                     >
                       {t(subItem.label)}
                     </Link>
@@ -194,8 +183,10 @@ const styles = {
       backgroundColor: 'transparent',
       borderTop: (t) => `1px solid #000`,
       color: rgba('#02073E', 0.4),
+      cursor: 'pointer',
       display: 'flex',
       alignItems: 'center',
+      justifyContent:'start',
       fontWeight: 500,
       minHeight: 44,
       marginLeft: 6,
@@ -206,7 +197,7 @@ const styles = {
       borderBottom: (t) => `1px solid #000`,
     },
     '.active': {
-      color: 'primary',
+      color: '#000',
     },
   },
   submenu: {
@@ -216,12 +207,13 @@ const styles = {
       color: 'rgba(2, 7, 62, 0.6)',
       fontWeight: 400,
       minHeight: 36,
-      color: '#000',
       marginLeft: 6,
+      cursor: 'pointer',
       // borderTop: '1px solid #000',
       background: 'rgba(193, 193, 193, 0.6)',
       '&:hover': {
-        color: 'primary',
+        color: '#000',
+        
       },
     },
   },
