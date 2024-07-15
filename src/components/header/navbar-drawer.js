@@ -83,7 +83,7 @@ const NavbarDrawer = () => {
       <Box sx={styles.wrapper}>
         <Logo sx={styles.logo} />
         <Box as="ul" sx={styles.navbar}>
-          {menuItems.map(({ path, label }, i) => (
+          {/* {menuItems.map(({ path, label, subItems }, i) => (
             <Box as="li" key={i}>
               <Link
                 activeClass="active"
@@ -96,7 +96,40 @@ const NavbarDrawer = () => {
                 {t(label)}
               </Link>
             </Box>
-          ))}
+          ))} */}
+          {menuItems.map(({ path, label, subItems }, i) => (
+          <Box as="li" key={i}>
+            <Link
+              activeClass="active"
+              to={path}
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              {t(label)}
+            </Link>
+            {subItems && (
+              <Box as="ul" sx={styles.submenu}>
+                {subItems.map((subItem, j) => (
+                  <Box as="li" key={j}>
+                    <Link
+                      activeClass="active"
+                      to={subItem.path}
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={500}
+                    >
+                      {t(subItem.label)}
+                    </Link>
+                  </Box>
+                ))}
+              </Box>
+            )}
+          </Box>
+        ))}
+
         </Box>
         <Button id="btn-en-ar" onClick={changeLanguage} value="en" variant="orange" sx={styles.donateNow}>
           English
@@ -174,6 +207,22 @@ const styles = {
     },
     '.active': {
       color: 'primary',
+    },
+  },
+  submenu: {
+    listStyle: 'none',
+    p: 0,
+    'li > a': {
+      color: 'rgba(2, 7, 62, 0.6)',
+      fontWeight: 400,
+      minHeight: 36,
+      color: '#000',
+      marginLeft: 6,
+      // borderTop: '1px solid #000',
+      background: 'rgba(193, 193, 193, 0.6)',
+      '&:hover': {
+        color: 'primary',
+      },
     },
   },
   donateNow: {
