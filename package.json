@@ -47,7 +47,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
-    "copy-webpack-plugin": "^12.0.2",
     "file-loader": "^1.1.11",
     "gatsby-plugin-postcss": "^3.7.0",
     "postcss": "^8.4.39",
