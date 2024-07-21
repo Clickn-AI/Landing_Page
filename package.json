@@ -5,10 +5,9 @@
   "version": "0.0.1",
   "author": "RedQ, Inc.",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.5.2",
-    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "@ricky0123/vad-web": "^0.0.18",
     "firebase": "^8.6.8",
     "framer-motion": "^4.1.17",
     "gatsby": "^2.25.1",
@@ -28,7 +27,6 @@
     "gatsby-transformer-sharp": "^2.5.21",
     "i18next": "^20.3.1",
     "multiformats": "^9.9.0",
-    "onnxruntime-web": "^1.18.0",
     "polished": "^4.0.5",
     "prop-types": "^15.7.2",
     "rc-drawer": "^4.1.0",
@@ -51,11 +49,11 @@
     "autoprefixer": "^10.4.19",
     "copy-webpack-plugin": "^12.0.2",
     "file-loader": "^1.1.11",
-    "gatsby-plugin-postcss": "^3.0.0",
+    "gatsby-plugin-postcss": "^3.7.0",
     "postcss": "^8.4.39",
     "postcss-loader": "^3.0.0",
-    "prettier": "^2.1.2",
-    "tailwindcss": "^3.4.4"
+    "prettier": "^2.8.8",
+    "tailwindcss": "^3.4.6"
   },
   "keywords": [
     "gatsby"
