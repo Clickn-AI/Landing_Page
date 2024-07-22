@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.clickn.ai
-Host: https://www.clickn.ai
+Sitemap: https://www.hams.ai
+Host: https://www.hams.ai
